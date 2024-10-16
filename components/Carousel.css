@@ -1,0 +1,70 @@
+.carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 1rem;
+  padding: 1rem 0;
+
+}
+
+.carousel-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-buttons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  z-index: 10;
+}
+
+.scroll-button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.scroll-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.scroll-button.left svg {
+  transform: rotate(90deg);
+}
+
+.scroll-button.right svg {
+  transform: rotate(-90deg);
+}
+
+.scroll-button svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  fill: currentColor;
+}
+
+@media (max-width: 480px) {
+  .scroll-buttons {
+    display: none;
+  }
+}
